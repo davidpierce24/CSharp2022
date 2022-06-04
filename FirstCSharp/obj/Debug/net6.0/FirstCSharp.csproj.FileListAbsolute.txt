@@ -1,0 +1,15 @@
+D:\Code\Coding Dojo\C#2022\FirstCSharp\bin\Debug\net6.0\FirstCSharp.exe
+D:\Code\Coding Dojo\C#2022\FirstCSharp\bin\Debug\net6.0\FirstCSharp.deps.json
+D:\Code\Coding Dojo\C#2022\FirstCSharp\bin\Debug\net6.0\FirstCSharp.runtimeconfig.json
+D:\Code\Coding Dojo\C#2022\FirstCSharp\bin\Debug\net6.0\FirstCSharp.dll
+D:\Code\Coding Dojo\C#2022\FirstCSharp\bin\Debug\net6.0\FirstCSharp.pdb
+D:\Code\Coding Dojo\C#2022\FirstCSharp\obj\Debug\net6.0\FirstCSharp.csproj.AssemblyReference.cache
+D:\Code\Coding Dojo\C#2022\FirstCSharp\obj\Debug\net6.0\FirstCSharp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Coding Dojo\C#2022\FirstCSharp\obj\Debug\net6.0\FirstCSharp.AssemblyInfoInputs.cache
+D:\Code\Coding Dojo\C#2022\FirstCSharp\obj\Debug\net6.0\FirstCSharp.AssemblyInfo.cs
+D:\Code\Coding Dojo\C#2022\FirstCSharp\obj\Debug\net6.0\FirstCSharp.csproj.CoreCompileInputs.cache
+D:\Code\Coding Dojo\C#2022\FirstCSharp\obj\Debug\net6.0\FirstCSharp.dll
+D:\Code\Coding Dojo\C#2022\FirstCSharp\obj\Debug\net6.0\refint\FirstCSharp.dll
+D:\Code\Coding Dojo\C#2022\FirstCSharp\obj\Debug\net6.0\FirstCSharp.pdb
+D:\Code\Coding Dojo\C#2022\FirstCSharp\obj\Debug\net6.0\FirstCSharp.genruntimeconfig.cache
+D:\Code\Coding Dojo\C#2022\FirstCSharp\obj\Debug\net6.0\ref\FirstCSharp.dll
