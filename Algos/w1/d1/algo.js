@@ -56,7 +56,7 @@ class SLL {
 
     insertAtBack(val) {
         if(this.isEmpty()) {
-            this.head = new Node(val):
+            this.head = new Node(val);
         } else {
             var runner = this.head;
         // we need to get to the back
