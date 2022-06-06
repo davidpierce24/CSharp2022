@@ -40,13 +40,31 @@ class SLL {
         // we need to use .push to push in the data of the node
         // we want to keepp going until we hit null
         // we don't know how many times we're going to run, so a while loop is the optimal solution
-        while(runner.next != null) {
+
+        // while(runner.next != null) {
+        // while(runner != null) {
+        // this while runner is the most succint way to write it b/c if the value = null, it will automatically stop
+        while(runner) {
             // we need to add the data to the array
             arr.push(runner.data);
             // we NEED to iterate
             runner = runner.next;
         }
+        // arr.push(runner.data);
         console.log(arr);
+    }
+
+    insertAtBack(val) {
+        if(this.isEmpty()) {
+            this.head = new Node(val):
+        } else {
+            var runner = this.head;
+        // we need to get to the back
+        while(runner.next) {
+            runner = runner.next;
+        }
+        runner.next  = new Node(val);
+        }
     }
 }
 
@@ -64,9 +82,13 @@ console.log(sll.isEmpty());
 // the pointer is pointing at a node
 // the node has a data and a next value
 // so when we represent the node as head, we are able to grab its attributes
-sll.head.next = node2;
-sll.head.next.next = node3;
-sll.head.next.next.next = node4;
+// sll.head.next = node2;
+// sll.head.next.next = node3;
+// sll.head.next.next.next = node4;
+
+sll.insertAtBack(7);
+sll.insertAtBack(9);
+sll.insertAtBack(1);
 
 console.log(sll)
 sll.print();
