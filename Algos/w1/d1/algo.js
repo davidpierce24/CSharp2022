@@ -35,4 +35,17 @@ class SLL {
 }
 
 var sll = new SLL();
-console.log(sll.isEmpty())
+var node1 = new Node(5);
+var node2 = new Node(7);
+var node3 = new Node(9);
+var node4 = new Node(1);
+console.log(sll.isEmpty());
+sll.head = node1;
+console.log(sll.isEmpty());
+// remember the head is a pointer
+// the pointer is pointing at a node
+// the node has a data and a next value
+// so when we represent the node as head, we are able to grab its attributes
+sll.head.next = node2;
+sll.head.next.next = node3;
+sll.head.next.next.next = node4;
