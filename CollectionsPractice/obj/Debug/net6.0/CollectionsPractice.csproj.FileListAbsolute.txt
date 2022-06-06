@@ -1,0 +1,15 @@
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\bin\Debug\net6.0\CollectionsPractice.exe
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\bin\Debug\net6.0\CollectionsPractice.deps.json
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\bin\Debug\net6.0\CollectionsPractice.runtimeconfig.json
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\bin\Debug\net6.0\CollectionsPractice.dll
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\bin\Debug\net6.0\CollectionsPractice.pdb
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.csproj.AssemblyReference.cache
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.AssemblyInfoInputs.cache
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.AssemblyInfo.cs
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.csproj.CoreCompileInputs.cache
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.dll
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\obj\Debug\net6.0\refint\CollectionsPractice.dll
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.pdb
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.genruntimeconfig.cache
+D:\Code\Coding Dojo\C#2022\CollectionsPractice\obj\Debug\net6.0\ref\CollectionsPractice.dll
