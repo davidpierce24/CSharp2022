@@ -32,7 +32,25 @@ class SLL {
         // a more efficient way of writing the question
         // return this.head == null
     }
+    print() {
+        // print all values in our sll
+        // we want to push all the values into an array and print out the array
+        var arr = [];
+        var runner = this.head;
+        // we need to use .push to push in the data of the node
+        // we want to keepp going until we hit null
+        // we don't know how many times we're going to run, so a while loop is the optimal solution
+        while(runner.next != null) {
+            // we need to add the data to the array
+            arr.push(runner.data);
+            // we NEED to iterate
+            runner = runner.next;
+        }
+        console.log(arr);
+    }
 }
+
+
 
 var sll = new SLL();
 var node1 = new Node(5);
@@ -49,3 +67,6 @@ console.log(sll.isEmpty());
 sll.head.next = node2;
 sll.head.next.next = node3;
 sll.head.next.next.next = node4;
+
+console.log(sll)
+sll.print();
