@@ -20,7 +20,34 @@ for(int i = 0; i < 10; i++)
 
 
 // List of flavors
+List<string> iceCream = new List<string>();
+
+iceCream.Add("Oreo");
+iceCream.Add("Chocolate");
+iceCream.Add("Cookie Dough");
+iceCream.Add("Vanilla");
+iceCream.Add("Oreo Latte");
+
+System.Console.WriteLine(iceCream.Count);
+
+System.Console.WriteLine(iceCream[2]);
+iceCream.RemoveAt(2);
+System.Console.WriteLine(iceCream[2]);
+
+System.Console.WriteLine(iceCream.Count);
 
 
 
 // User info dictionary
+Dictionary<string, string> user = new Dictionary<string, string>();
+
+Random rand = new Random();
+for(int i = 0; i < arr2.Length; i++)
+{
+    user.Add(arr2[i], iceCream[rand.Next(0,4)]);
+}
+
+foreach (KeyValuePair<string,string> entry in user)
+{
+    System.Console.WriteLine(entry.Key + " - " + entry.Value);
+}
