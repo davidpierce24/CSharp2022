@@ -1,0 +1,15 @@
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.exe
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.deps.json
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.runtimeconfig.json
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.dll
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.pdb
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.csproj.AssemblyReference.cache
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.AssemblyInfoInputs.cache
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.AssemblyInfo.cs
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.csproj.CoreCompileInputs.cache
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.dll
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\obj\Debug\net6.0\refint\WizardNinjaSamurai.dll
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.pdb
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.genruntimeconfig.cache
+D:\Code\Coding Dojo\C#2022\WizardNinjaSamurai\obj\Debug\net6.0\ref\WizardNinjaSamurai.dll
