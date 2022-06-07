@@ -1,0 +1,15 @@
+D:\Code\Coding Dojo\C#2022\human\bin\Debug\net6.0\human.exe
+D:\Code\Coding Dojo\C#2022\human\bin\Debug\net6.0\human.deps.json
+D:\Code\Coding Dojo\C#2022\human\bin\Debug\net6.0\human.runtimeconfig.json
+D:\Code\Coding Dojo\C#2022\human\bin\Debug\net6.0\human.dll
+D:\Code\Coding Dojo\C#2022\human\bin\Debug\net6.0\human.pdb
+D:\Code\Coding Dojo\C#2022\human\obj\Debug\net6.0\human.csproj.AssemblyReference.cache
+D:\Code\Coding Dojo\C#2022\human\obj\Debug\net6.0\human.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Coding Dojo\C#2022\human\obj\Debug\net6.0\human.AssemblyInfoInputs.cache
+D:\Code\Coding Dojo\C#2022\human\obj\Debug\net6.0\human.AssemblyInfo.cs
+D:\Code\Coding Dojo\C#2022\human\obj\Debug\net6.0\human.csproj.CoreCompileInputs.cache
+D:\Code\Coding Dojo\C#2022\human\obj\Debug\net6.0\human.dll
+D:\Code\Coding Dojo\C#2022\human\obj\Debug\net6.0\refint\human.dll
+D:\Code\Coding Dojo\C#2022\human\obj\Debug\net6.0\human.pdb
+D:\Code\Coding Dojo\C#2022\human\obj\Debug\net6.0\human.genruntimeconfig.cache
+D:\Code\Coding Dojo\C#2022\human\obj\Debug\net6.0\ref\human.dll
