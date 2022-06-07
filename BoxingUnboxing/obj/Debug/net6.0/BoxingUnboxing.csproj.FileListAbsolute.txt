@@ -1,0 +1,15 @@
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\bin\Debug\net6.0\BoxingUnboxing.exe
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\bin\Debug\net6.0\BoxingUnboxing.deps.json
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\bin\Debug\net6.0\BoxingUnboxing.runtimeconfig.json
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\bin\Debug\net6.0\BoxingUnboxing.dll
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\bin\Debug\net6.0\BoxingUnboxing.pdb
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\obj\Debug\net6.0\BoxingUnboxing.csproj.AssemblyReference.cache
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\obj\Debug\net6.0\BoxingUnboxing.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\obj\Debug\net6.0\BoxingUnboxing.AssemblyInfoInputs.cache
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\obj\Debug\net6.0\BoxingUnboxing.AssemblyInfo.cs
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\obj\Debug\net6.0\BoxingUnboxing.csproj.CoreCompileInputs.cache
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\obj\Debug\net6.0\BoxingUnboxing.dll
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\obj\Debug\net6.0\refint\BoxingUnboxing.dll
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\obj\Debug\net6.0\BoxingUnboxing.pdb
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\obj\Debug\net6.0\BoxingUnboxing.genruntimeconfig.cache
+D:\Code\Coding Dojo\C#2022\BoxingUnboxing\obj\Debug\net6.0\ref\BoxingUnboxing.dll
