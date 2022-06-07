@@ -1,0 +1,15 @@
+D:\Code\Coding Dojo\C#2022\classlecture1\bin\Debug\net6.0\classlecture1.exe
+D:\Code\Coding Dojo\C#2022\classlecture1\bin\Debug\net6.0\classlecture1.deps.json
+D:\Code\Coding Dojo\C#2022\classlecture1\bin\Debug\net6.0\classlecture1.runtimeconfig.json
+D:\Code\Coding Dojo\C#2022\classlecture1\bin\Debug\net6.0\classlecture1.dll
+D:\Code\Coding Dojo\C#2022\classlecture1\bin\Debug\net6.0\classlecture1.pdb
+D:\Code\Coding Dojo\C#2022\classlecture1\obj\Debug\net6.0\classlecture1.csproj.AssemblyReference.cache
+D:\Code\Coding Dojo\C#2022\classlecture1\obj\Debug\net6.0\classlecture1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Coding Dojo\C#2022\classlecture1\obj\Debug\net6.0\classlecture1.AssemblyInfoInputs.cache
+D:\Code\Coding Dojo\C#2022\classlecture1\obj\Debug\net6.0\classlecture1.AssemblyInfo.cs
+D:\Code\Coding Dojo\C#2022\classlecture1\obj\Debug\net6.0\classlecture1.csproj.CoreCompileInputs.cache
+D:\Code\Coding Dojo\C#2022\classlecture1\obj\Debug\net6.0\classlecture1.dll
+D:\Code\Coding Dojo\C#2022\classlecture1\obj\Debug\net6.0\refint\classlecture1.dll
+D:\Code\Coding Dojo\C#2022\classlecture1\obj\Debug\net6.0\classlecture1.pdb
+D:\Code\Coding Dojo\C#2022\classlecture1\obj\Debug\net6.0\classlecture1.genruntimeconfig.cache
+D:\Code\Coding Dojo\C#2022\classlecture1\obj\Debug\net6.0\ref\classlecture1.dll
