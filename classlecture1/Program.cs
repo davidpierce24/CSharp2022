@@ -14,3 +14,7 @@ Console.WriteLine(Dog.isFriendly);
 Console.WriteLine(Coyote.Diet);
 
 Coyote.makeNoise("Howl");
+
+Mammal Lion = new Mammal("Lion", 120, "Omnivore", false);
+
+Console.WriteLine(Lion.Weight);
