@@ -31,4 +31,11 @@ class Animal
         Weight = weight;
         Diet = "Ominvore";
     }
+
+    // Methods (function) these are the things an animal can do
+
+    public void makeNoise(string sound)
+    {
+        Console.WriteLine(sound);
+    }
 }

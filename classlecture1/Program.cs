@@ -12,3 +12,5 @@ Console.WriteLine(Dog.Diet);
 Console.WriteLine(Bear.isFriendly);
 Console.WriteLine(Dog.isFriendly);
 Console.WriteLine(Coyote.Diet);
+
+Coyote.makeNoise("Howl");
