@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "gu8V2CcZZ4d53Z0xNojKOtwUlTw81d097JtKwMXnhNU=",
+  "Source": "FormDemo",
+  "BasePath": "_content/FormDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FormDemo\\wwwroot",
+      "Source": "FormDemo",
+      "ContentRoot": "D:\\Code\\Coding Dojo\\C#2022\\FormDemo\\wwwroot\\",
+      "BasePath": "_content/FormDemo",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Code\\Coding Dojo\\C#2022\\FormDemo\\wwwroot\\images\\asilentvoicefirework 2.gif",
+      "SourceId": "FormDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\Coding Dojo\\C#2022\\FormDemo\\wwwroot\\",
+      "BasePath": "_content/FormDemo",
+      "RelativePath": "images/asilentvoicefirework 2.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\asilentvoicefirework 2.gif"
+    }
+  ]
+}
