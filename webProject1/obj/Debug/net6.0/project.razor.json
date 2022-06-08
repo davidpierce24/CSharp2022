@@ -16296,6 +16296,22 @@
     "CSharpLanguageVersion": 1000
   },
   "RootNamespace": "webProject1",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\webProject1\\Views\\Hello\\Third.cshtml",
+      "TargetPath": "Views\\Hello\\Third.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\webProject1\\Views\\Hello\\Index.cshtml",
+      "TargetPath": "Views\\Hello\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\webProject1\\Views\\Hello\\Second.cshtml",
+      "TargetPath": "Views\\Hello\\Second.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }

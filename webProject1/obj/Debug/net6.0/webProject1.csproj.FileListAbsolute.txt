@@ -19,3 +19,5 @@ D:\Code\Coding Dojo\C#2022\webProject1\obj\Debug\net6.0\refint\webProject1.dll
 D:\Code\Coding Dojo\C#2022\webProject1\obj\Debug\net6.0\webProject1.pdb
 D:\Code\Coding Dojo\C#2022\webProject1\obj\Debug\net6.0\webProject1.genruntimeconfig.cache
 D:\Code\Coding Dojo\C#2022\webProject1\obj\Debug\net6.0\ref\webProject1.dll
+D:\Code\Coding Dojo\C#2022\webProject1\obj\Debug\net6.0\webProject1.RazorAssemblyInfo.cache
+D:\Code\Coding Dojo\C#2022\webProject1\obj\Debug\net6.0\webProject1.RazorAssemblyInfo.cs
