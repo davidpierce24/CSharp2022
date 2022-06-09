@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model User
+
+<div class="text-center">
+    <form action="process" method="post">
+        <div class="form-group">
+            <label for="Name">Your Name: </label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Location">Dojo Location: </label>
+            <select asp-for="Location" class="form-control">
+                <option selected disabled>Select a location</option>
+                <option value="Online">Online</option>
+                <option value="Chi Town">Chi Town</option>
+            </select>
+            <span asp-validation-for="Location" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Language">Favorite Language: </label>
+            <select asp-for="Language" class="form-control">
+                <option selected disabled>Select a Language</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Python">Python</option>
+                <option value="C#">C#</option>
+            </select>
+            <span asp-validation-for="Language" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Comment">Comment (optional): </label>
+            <textarea asp-for="Comment" class="form-control"></textarea>
+            <span asp-validation-for="Comment" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-info">
+        </div>
+    </form>
+</div>
