@@ -214,7 +214,27 @@ class SLL {
 
     // EXTRA: Given a value, split your list into two lists along that value. Ex: if your original list was 1, 2, 3, 4, 5 and you were given 3, your first list should have 1, 2 and your second list should have 3, 4, 5
     splitOnVal(val){
-        // your code here
+        if(this.isEmpty()){
+            return new SLL();
+        }
+        let runner = this.head;
+        while(runner){
+            if(runner.next === null){
+                return new SLL();
+            }
+            if(runner.next.data === val){
+                break;
+            }
+            runner = runner.next;
+        }
+        if(runner === null){
+            return new SLL();
+        }
+        let newHead = runner.next;
+        runner.next = null;
+        let newSll = new SLL();
+        newSll.head = newHead;
+        return newSll;
     }
 }
 
