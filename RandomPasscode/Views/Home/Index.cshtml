@@ -3,7 +3,7 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Random passcode (passcode @Context.Session.GetInt32("Count"))</h1>
-    <input type="text" class="form-control" value='@Context.Session.GetString("Result")'>
-    <a href="passcode"><button class="btn btn-info"> Show Me the Money </button></a>
+    <h1 class="display-4" id="count">Random passcode (passcode @Context.Session.GetInt32("Count"))</h1>
+    <input type="text" class="form-control" value='@Context.Session.GetString("Result")' id="passcode">
+    <a href="passcode"><button class="btn btn-info" id="btn"> Show Me the Money </button></a>
 </div>
