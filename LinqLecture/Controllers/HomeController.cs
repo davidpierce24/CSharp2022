@@ -37,7 +37,7 @@ public class HomeController : Controller
     {
         // this will get us All of the data from our database
         List<Game> allGamesFromData = AllGames.OrderBy(s => s.Title).OrderBy(d => d.Price).ToList();
-        ViewBag.Data = allGamesFromData;
+        ViewBag.Games = allGamesFromData;
 
         // get only games available on all platforms
         List<Game> allPlatforms = AllGames.Where(f => f.Platform == "All").ToList();
