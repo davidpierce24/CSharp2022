@@ -3,10 +3,10 @@
 //     $("#btn").on("click", function (e){
 //         e.preventDefault();
 //         $.ajax({
-//             url: "passcode",
+//             url: "Home/Passcode",
 //             success: function(){
 //                 console.log("success")
-//                 $('#count').html(`<h2>${sessionStorage.getItem("Count")}</h2> `)
+//                 $('#count').append(`<h2>${sessionStorage.getItem("Count")}</h2> `)
 //                 sessionStorage.getItem("Count")
 //             }, 
 //             error: function(err){
