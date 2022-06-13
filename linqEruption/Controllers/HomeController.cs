@@ -54,6 +54,39 @@ public class HomeController : Controller
         // first eruption in hawaii
         Eruption firstHawaiian = eruptions.FirstOrDefault(d => d.Location == "Hawaiian Is");
         ViewBag.firstHawaiian = firstHawaiian;
+
+        // first eruption after 1900 and in New Zealand
+        Eruption firstNewZealand = eruptions.FirstOrDefault(d => d.Location == "New Zealand" && d.Year > 1900);
+        ViewBag.firstNewZealand = firstNewZealand;
+
+        // all eruptions where volcano elevation is over 2000m
+        List<Eruption> highElevation = eruptions.Where(d => d.ElevationInMeters > 2000).ToList();
+        ViewBag.highElevation = highElevation;
+
+        // all eruptions that start with Z
+        List<Eruption> startsWithZ = eruptions.Where(d => d.Volcano.StartsWith("K")).ToList();
+        ViewBag.startsWithZ = startsWithZ;
+
+        // highest elevation
+        int highest = eruptions.Max(d => d.ElevationInMeters);
+        ViewBag.highest = highest;
+
+        // find volcano with highest elevation
+        Eruption tallestVolcano = eruptions.FirstOrDefault(d => d.ElevationInMeters == highest);
+        ViewBag.tallestVolcano = tallestVolcano;
+
+        // all volcanos alphabetically
+        List<Eruption> allVolcanos = eruptions.OrderBy(d => d.Volcano).ToList();
+        ViewBag.allVolcanos = allVolcanos;
+
+        // all eruptions before 1000 CE alphabetically by volcano name
+        List<Eruption> eruptionsBefore1000 = eruptions.Where(d => d.Year < 1000).OrderBy(d => d.Volcano).ToList();
+        ViewBag.eruptionsBefore1000 = eruptionsBefore1000;
+
+        // all eruptions before 1000 CE alphabetically by volcano name
+        List<string> eruptionsBefore1000Better = eruptions.Where(d => d.Year < 1000).OrderBy(d => d.Volcano).Select(d => d.Volcano).ToList();
+        ViewBag.eruptionsBefore1000Better = eruptionsBefore1000Better;
+
         return View();
     }
 

@@ -4,12 +4,118 @@
 
 <div class="text-center">
     <h2>First eruption in Chile</h2>
-    <h3>@ViewBag.firstChile</h3>
+    <h4>@ViewBag.firstChile</h4>
 
     <h2>First eruption in Hawaii</h2>
     @if(ViewBag.firstHawaiian == null){
-        <h3>No Hawaiian is eruption found</h3>
+        <h4>No Hawaiian is eruption found</h4>
         }else{
-        <h3>@ViewBag.firstHawaiian</h3>
+        <h4>@ViewBag.firstHawaiian</h4>
         }
+
+    <h2>First eruption in New Zealand after 1900</h2>
+    <h4>@ViewBag.firstNewZealand</h4>
+
+    <h2>Eruptions above 2000m</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Volcano</th>
+            <th>Year</th>
+            <th>Location</th>
+            <th>ElevationInMeters</th>
+            <th>Type</th>
+        </tr>
+        @foreach (Eruption e in ViewBag.highElevation)
+        {
+            <tr>
+                <td>@e.Volcano</td>
+                <td>@e.Year</td>
+                <td>@e.Location</td>
+                <td>@e.ElevationInMeters</td>
+                <td>@e.Type</td>
+            </tr>
+        }
+    </table>
+
+    <h2>Eruptions that start with K</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Volcano</th>
+            <th>Year</th>
+            <th>Location</th>
+            <th>ElevationInMeters</th>
+            <th>Type</th>
+        </tr>
+        @foreach (Eruption e in ViewBag.startsWithZ)
+        {
+            <tr>
+                <td>@e.Volcano</td>
+                <td>@e.Year</td>
+                <td>@e.Location</td>
+                <td>@e.ElevationInMeters</td>
+                <td>@e.Type</td>
+            </tr>
+        }
+    </table>
+
+    <h2>Highest elevation</h2>
+    <h4>@ViewBag.highest</h4>
+
+    <h2>Tallest Volcano</h2>
+    <h4>@ViewBag.tallestVolcano</h4>
+
+    <h2>All Volcanos</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Volcano</th>
+            <th>Year</th>
+            <th>Location</th>
+            <th>ElevationInMeters</th>
+            <th>Type</th>
+        </tr>
+        @foreach (Eruption e in ViewBag.allVolcanos)
+        {
+            <tr>
+                <td>@e.Volcano</td>
+                <td>@e.Year</td>
+                <td>@e.Location</td>
+                <td>@e.ElevationInMeters</td>
+                <td>@e.Type</td>
+            </tr>
+        }
+    </table>
+
+    <h2>Eruptions before 1000</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Volcano</th>
+            <th>Year</th>
+            <th>Location</th>
+            <th>ElevationInMeters</th>
+            <th>Type</th>
+        </tr>
+        @foreach (Eruption e in ViewBag.eruptionsBefore1000)
+        {
+            <tr>
+                <td>@e.Volcano</td>
+                <td>@e.Year</td>
+                <td>@e.Location</td>
+                <td>@e.ElevationInMeters</td>
+                <td>@e.Type</td>
+            </tr>
+        }
+    </table>
+
+    <h2>Eruptions before 1000 Just Name</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Volcano</th>
+        </tr>
+        @foreach (string e in ViewBag.eruptionsBefore1000Better)
+        {
+            <tr>
+                <td>@e</td>
+            </tr>
+        }
+    </table>
 </div>
