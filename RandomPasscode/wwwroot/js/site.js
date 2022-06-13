@@ -17,3 +17,12 @@
 //     })
 
 // })
+
+
+// async function call() {
+//     const result = await fetch ("http://localhost:5006/passcode");
+//     const messageResult = await result.json();
+//     // message.innerHTML = messageResult;
+//     updateStats();
+//     checkWin();
+// }
