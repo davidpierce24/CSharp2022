@@ -23,4 +23,64 @@
             </tr>
         }
     </table>
+
+    <h1 class="display-4">Available on all platforms</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>Rating</th>
+            <th>Platform</th>
+        </tr>
+        @foreach (Game g in ViewBag.allPlatforms)
+        {
+            <tr>
+                <td>@g.Title</td>
+                <td>$@g.Price</td>
+                <td>@g.Genre</td>
+                <td>@g.Rating</td>
+                <td>@g.Platform</td>
+            </tr>
+        }
+    </table>
+
+    <h1 class="display-4">Top M Games</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>Rating</th>
+            <th>Platform</th>
+        </tr>
+        @foreach (Game g in ViewBag.topMGames)
+        {
+            <tr>
+                <td>@g.Title</td>
+                <td>$@g.Price</td>
+                <td>@g.Genre</td>
+                <td>@g.Rating</td>
+                <td>@g.Platform</td>
+            </tr>
+        }
+    </table>
+
+    <h1 class="display-4">Your search result for Rocket League</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>Rating</th>
+            <th>Platform</th>
+        </tr>
+        <tr>
+            <td>@ViewBag.singleGame.Title</td>
+            <td>$@ViewBag.singleGame.Price</td>
+            <td>@ViewBag.singleGame.Genre</td>
+            <td>@ViewBag.singleGame.Rating</td>
+            <td>@ViewBag.singleGame.Platform</td>
+        </tr>
+    </table>
 </div>

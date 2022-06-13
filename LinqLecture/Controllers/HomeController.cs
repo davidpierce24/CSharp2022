@@ -36,8 +36,18 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         // this will get us All of the data from our database
-        List<Game> allGamesFromData = AllGames.OrderByDescending(s => s.Price).ToList();
+        List<Game> allGamesFromData = AllGames.OrderBy(s => s.Title).OrderBy(d => d.Price).ToList();
         ViewBag.Data = allGamesFromData;
+
+        // get only games available on all platforms
+        List<Game> allPlatforms = AllGames.Where(f => f.Platform == "All").ToList();
+        ViewBag.allPlatforms = allPlatforms;
+
+        List<Game> topMGames = AllGames.Where(a => a.Rating == "M").OrderBy(s => s.Price).Take(3).ToList();
+        ViewBag.TopMGames = topMGames;
+
+        Game singleGame = AllGames.FirstOrDefault(d => d.Title == "Rocket League");
+        ViewBag.singleGame = singleGame;
         return View();
     }
 
