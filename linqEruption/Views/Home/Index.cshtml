@@ -3,6 +3,13 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h2>First eruption in Chile</h2>
+    <h3>@ViewBag.firstChile</h3>
+
+    <h2>First eruption in Hawaii</h2>
+    @if(ViewBag.firstHawaiian == null){
+        <h3>No Hawaiian is eruption found</h3>
+        }else{
+        <h3>@ViewBag.firstHawaiian</h3>
+        }
 </div>

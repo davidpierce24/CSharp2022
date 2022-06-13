@@ -47,6 +47,13 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        // find first eruption in Chile
+        Eruption firstChile = eruptions.FirstOrDefault(d => d.Location == "Chile");
+        ViewBag.firstChile = firstChile;
+
+        // first eruption in hawaii
+        Eruption firstHawaiian = eruptions.FirstOrDefault(d => d.Location == "Hawaiian Is");
+        ViewBag.firstHawaiian = firstHawaiian;
         return View();
     }
 
