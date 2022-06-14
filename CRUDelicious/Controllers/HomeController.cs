@@ -68,6 +68,15 @@ public class HomeController : Controller
         return RedirectToAction("ShowDish", oldDish);
     }
 
+    [HttpGet("dish/destroy/{DishId}")]
+    public IActionResult DestroyDish(int DishId)
+    {
+        Dish dishToDestroy = _context.Dishes.SingleOrDefault(d => d.DishId == DishId);
+        _context.Dishes.Remove(dishToDestroy);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
     public IActionResult Privacy()
     {
         return View();
