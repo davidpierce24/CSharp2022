@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EwKc5tzQTVMMiUZMg9TYEOeOo81vIRdbWxFK09ytl6o=",
+  "Hash": "TBsmBuDEyxmf0KZcyLS1t3wIkLBR54HI5IHTomyU2jE=",
   "Source": "CRUDelicious",
   "BasePath": "_content/CRUDelicious",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Code\\Coding Dojo\\C#2022\\CRUDelicious\\wwwroot\\Images\\goteem.gif",
+      "SourceId": "CRUDelicious",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\Coding Dojo\\C#2022\\CRUDelicious\\wwwroot\\",
+      "BasePath": "_content/CRUDelicious",
+      "RelativePath": "Images/goteem.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\goteem.gif"
     },
     {
       "Identity": "D:\\Code\\Coding Dojo\\C#2022\\CRUDelicious\\wwwroot\\js\\site.js",
