@@ -18,6 +18,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.AllItems = _context.Items.OrderBy(d => d.Name).ToList();
         return View();
     }
 

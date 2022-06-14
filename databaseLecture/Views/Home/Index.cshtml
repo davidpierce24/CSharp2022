@@ -20,4 +20,19 @@
             <input type="submit" value="Press It" class="btn btn-info">
         </div>
     </form>
+    <h2>All My Items</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Item Name</th>
+            <th>Item Description</th>
+        </tr>
+        @foreach (Item i in ViewBag.AllItems)
+        {
+            <tr>
+                <td>@i.Name</td>
+                <td>@i.Description</td>
+                <td>Edit | Delete</td>
+            </tr>
+        }
+    </table>
 </div>
