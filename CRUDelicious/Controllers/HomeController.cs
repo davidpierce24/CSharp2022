@@ -15,18 +15,21 @@ public class HomeController : Controller
         _context = context;
     }
 
+    // Route to display home page with list of dishes
     public IActionResult Index()
     {
         ViewBag.AllDishes = _context.Dishes.OrderByDescending(x => x.CreatedAt).ToList();
         return View();
     }
 
+    // Route to take user to page for adding a dish
     [HttpGet("new/dish")]
     public IActionResult NewDish()
     {
         return View();
     }
 
+    // Route to process added dishes
     [HttpPost("dish/add")]
     public IActionResult AddDish(Dish newDish)
     {
@@ -40,6 +43,7 @@ public class HomeController : Controller
         }
     }
 
+    // route to show a specific dish
     [HttpGet("dish/show/{DishId}")]
     public IActionResult ShowDish(int DishId)
     {
@@ -47,6 +51,7 @@ public class HomeController : Controller
         return View(dishToShow);
     }
 
+    // route to take a user to a dish's page to make edits
     [HttpGet("dish/edit/{DishId}")]
     public IActionResult EditDish(int DishId)
     {
@@ -54,6 +59,7 @@ public class HomeController : Controller
         return View(dishToEdit);
     }
 
+    // route to process dish edits
     [HttpPost("dish/update/{DishId}")]
     public IActionResult UpdateDish(int DishId, Dish changeDish)
     {
@@ -68,6 +74,7 @@ public class HomeController : Controller
         return RedirectToAction("ShowDish", oldDish);
     }
 
+    // route to destroy a dish
     [HttpGet("dish/destroy/{DishId}")]
     public IActionResult DestroyDish(int DishId)
     {
@@ -77,6 +84,7 @@ public class HomeController : Controller
         return RedirectToAction("Index");
     }
 
+    // we have achieved CRUD
     public IActionResult Privacy()
     {
         return View();
