@@ -8,12 +8,12 @@
     <form action="/item/add" method="post">
         <div class="form-group">
             <label for="Name">Name</label>
-            <input asp-for="Name">
+            <input asp-for="Name" class="form-control">
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label for="Description">Description</label>
-            <input asp-for="Description">
+            <input asp-for="Description" class="form-control">
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
         <div class="form-group">
@@ -25,13 +25,14 @@
         <tr>
             <th>Item Name</th>
             <th>Item Description</th>
+            <th>Actions</th>
         </tr>
         @foreach (Item i in ViewBag.AllItems)
         {
             <tr>
                 <td>@i.Name</td>
                 <td>@i.Description</td>
-                <td>Edit | Delete</td>
+                <td><a href="/item/edit/@i.ItemId">Edit</a> | <a href="/item/delete/@i.ItemId">Delete</a></td>
             </tr>
         }
     </table>

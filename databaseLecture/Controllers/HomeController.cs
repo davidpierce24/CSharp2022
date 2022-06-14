@@ -37,6 +37,34 @@ public class HomeController : Controller
         }
     }
 
+    [HttpGet("/item/delete/{itemId}")]
+    public IActionResult DeleteItem(int itemId)
+    {
+        Item itemToDelete = _context.Items.SingleOrDefault(a => a.ItemId == itemId);
+        _context.Items.Remove(itemToDelete);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
+    [HttpGet("item/edit/{itemId}")]
+    public IActionResult EditItem(int itemId)
+    {
+        // we need to find the item
+        Item itemToEdit = _context.Items.FirstOrDefault(a => a.ItemId == itemId);
+        return View(itemToEdit);
+    }
+
+    [HttpPost("item/update/{itemId}")]
+    public IActionResult UpdateItem(int itemId, Item newVersionOfItem)
+    {
+        Item oldItem = _context.Items.FirstOrDefault(a => a.ItemId == itemId);
+        oldItem.Name = newVersionOfItem.Name;
+        oldItem.Description = newVersionOfItem.Description;
+        oldItem.UpdatedAt = DateTime.Now;
+        _context.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
     public IActionResult Privacy()
     {
         return View();
