@@ -6,11 +6,15 @@ namespace databaseLecture.Controllers;
 
 public class HomeController : Controller
 {
+    private MyContext _context;
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, MyContext context)
     {
         _logger = logger;
+        // this establishes the connection to our database
+        
+        _context = context;
     }
 
     public IActionResult Index()
