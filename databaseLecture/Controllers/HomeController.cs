@@ -13,7 +13,6 @@ public class HomeController : Controller
     {
         _logger = logger;
         // this establishes the connection to our database
-        
         _context = context;
     }
 
