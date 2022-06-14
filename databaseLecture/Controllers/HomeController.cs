@@ -21,6 +21,21 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpPost("item/add")]
+    public IActionResult AddItem(Item newItem)
+    {
+        // we add this to db as long as it's valid
+        if(ModelState.IsValid)
+        {
+            // we can add to db
+            _context.Add(newItem);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        } else {
+            return View("Index");
+        }
+    }
+
     public IActionResult Privacy()
     {
         return View();
