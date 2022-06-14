@@ -36,9 +36,22 @@ public class HomeController : Controller
             _context.SaveChanges();
             return RedirectToAction("Index");
         } else {
-            ViewBag.AllDishes = _context.Dishes.OrderByDescending(x => x.CreatedAt).ToList();
-            return View("Index");
+            return View("NewDish");
         }
+    }
+
+    [HttpGet("dish/show/{DishId}")]
+    public IActionResult ShowDish(int DishId)
+    {
+        Dish dishToShow = _context.Dishes.FirstOrDefault(x => x.DishId == DishId);
+        return View(dishToShow);
+    }
+
+    [HttpGet("dish/edit/{DishId}")]
+    public IActionResult EditDish(int DishId)
+    {
+        Dish dishToEdit = _context.Dishes.FirstOrDefault(x => x.DishId == DishId);
+        return View(dishToEdit);
     }
 
     public IActionResult Privacy()

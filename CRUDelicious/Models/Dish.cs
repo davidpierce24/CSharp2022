@@ -14,7 +14,7 @@ public class Dish
     [Range(1,5)]
     public int Tastiness {get; set;}
     [Required]
-    [Range(1,int.MaxValue)]
+    [Range(0,int.MaxValue)]
     public int Calories {get; set;}
     [Required]
     public string Description {get; set;}
