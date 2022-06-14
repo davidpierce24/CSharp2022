@@ -16328,6 +16328,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\CRUDelicious\\Views\\Home\\NewDish.cshtml",
+      "TargetPath": "Views\\Home\\NewDish.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\CRUDelicious\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

@@ -17,6 +17,13 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.AllDishes = _context.Dishes.OrderByDescending(x => x.CreatedAt).ToList();
+        return View();
+    }
+
+    [HttpGet("new/dish")]
+    public IActionResult NewDish()
+    {
         return View();
     }
 
