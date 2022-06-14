@@ -33,6 +33,7 @@ public class HomeController : Controller
             _context.SaveChanges();
             return RedirectToAction("Index");
         } else {
+            ViewBag.AllItems = _context.Items.OrderBy(d => d.Name).ToList();
             return View("Index");
         }
     }
