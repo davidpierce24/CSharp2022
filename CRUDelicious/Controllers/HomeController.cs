@@ -27,6 +27,20 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpPost("dish/add")]
+    public IActionResult AddDish(Dish newDish)
+    {
+        if(ModelState.IsValid)
+        {
+            _context.Add(newDish);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        } else {
+            ViewBag.AllDishes = _context.Dishes.OrderByDescending(x => x.CreatedAt).ToList();
+            return View("Index");
+        }
+    }
+
     public IActionResult Privacy()
     {
         return View();
