@@ -1,11 +1,13 @@
 @model Dish
 
-<h1>@Model.Name</h1>
-<h4>@Model.Chef</h4>
+<div class="text-center">
+    <h1>@Model.Name</h1>
+    <h4>@Model.Chef</h4>
 
-<p>@Model.Description</p>
-<p>Calories: @Model.Calories</p>
-<p>Tastiness: @Model.Tastiness</p>
+    <p>@Model.Description</p>
+    <p>Calories: @Model.Calories</p>
+    <p>Tastiness: @Model.Tastiness</p>
 
-<a href="" class="btn btn-danger">DESTROY</a>
-<a href="/dish/edit/@Model.DishId" class="btn btn-info">I GUESS YOU CAN CHANGE</a>
+    <a href="" class="btn btn-danger">DESTROY</a>
+    <a href="/dish/edit/@Model.DishId" class="btn btn-info">CHANGE THAT THANG</a>
+</div>

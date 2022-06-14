@@ -54,6 +54,20 @@ public class HomeController : Controller
         return View(dishToEdit);
     }
 
+    [HttpPost("dish/update/{DishId}")]
+    public IActionResult UpdateDish(int DishId, Dish changeDish)
+    {
+        Dish oldDish = _context.Dishes.FirstOrDefault(x => x.DishId == DishId);
+        oldDish.Name = changeDish.Name;
+        oldDish.Chef = changeDish.Chef;
+        oldDish.Description = changeDish.Description;
+        oldDish.Calories = changeDish.Calories;
+        oldDish.Tastiness = changeDish.Tastiness;
+        oldDish.UpdatedAt = DateTime.Now;
+        _context.SaveChanges();
+        return RedirectToAction("ShowDish", oldDish);
+    }
+
     public IActionResult Privacy()
     {
         return View();
