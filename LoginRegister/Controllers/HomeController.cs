@@ -59,6 +59,22 @@ public class HomeController : Controller
     public IActionResult Login(LogUser loginUser)
     {
         if(ModelState.IsValid){
+            // check to see if email is in db
+            User userInDb = _context.Users.FirstOrDefault(d => d.Email == loginUser.LogEmail);
+            if(userInDb == null){
+                // no email in database
+                ModelState.AddModelError("LogEmail", "Invalid login attempt");
+                return View("Index");
+            }
+            // check for hashed password
+            PasswordHasher<LogUser> Hasher = new PasswordHasher<LogUser>();
+            var result = Hasher.VerifyHashedPassword(loginUser, userInDb.Password, loginUser.LogPassword);
+            // if password was incorrect
+            if(result == 0){
+                ModelState.AddModelError("LogEmail", "Invalid login attempt");
+                return View("Index");
+            }
+            HttpContext.Session.SetInt32("user", userInDb.UserId);
             return RedirectToAction("Success");
         } else {
             return View("Index");
