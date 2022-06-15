@@ -24,7 +24,7 @@ public class User
     [NotMapped]
     [Compare("Password")]
     [DataType(DataType.Password)]
-    public string ConfrimPassword {get; set;}
+    public string ConfirmPassword {get; set;}
     public DateTime CreatedAt {get; set;} = DateTime.Now;
     public DateTime UpdatedAt {get; set;} = DateTime.Now;
 }
