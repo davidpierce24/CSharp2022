@@ -94,6 +94,76 @@ class BST {
         let range = max - min;
         return range;
     }
+
+    // Given a value, insert it into the correct location in the binary search tree
+    insert(val){
+        // initialize runner at root
+        let runner = this.root;
+        if (this.isEmpty()){
+            var node1 = new Node(val);
+            this.root = node1;
+            return this
+        }
+        while(runner){
+            // if val is found, return true
+            if (runner.data == val){
+                var nodeD = new Node(val);
+                runner.left = nodeD;
+                return this
+            }
+            // if val is less than runner, iterate left
+            if(runner.data > val){
+                if(runner.left == null){
+                    var nodeL = new Node(val);
+                    runner.left = nodeL;
+                    return this
+                }
+                runner = runner.left;
+            }
+            // if val is greater than runner, iterate right
+            else if(runner.data < val){
+                if(runner.right == null){
+                    var nodeR = new Node(val);
+                    runner.right = nodeR;
+                    return this
+                }
+                runner = runner.right;
+            }
+        }
+    }
+
+    // Now that you've solved insert iteratively, write it recursively
+    insertRecursive(val, runner = this.root){
+        if (this.isEmpty()){
+            var node1 = new Node(val);
+            this.root = node1;
+            return this;
+        }
+        // if val is found, return true
+        if (runner.data == val){
+            var nodeD = new Node(val);
+            runner.left = nodeD;
+            return this;
+        }
+        // if val is less than runner, iterate left
+        if(runner.data > val){
+            if(runner.left == null){
+                var nodeL = new Node(val);
+                runner.left = nodeL;
+                return this
+            }
+            return this.insertRecursive(val, runner.left);
+        }
+        // if val is greater than runner, iterate right
+        else if(runner.data < val){
+            if(runner.right == null){
+                var nodeR = new Node(val);
+                runner.right = nodeR;
+                return this
+            }
+            return this.insertRecursive(val, runner.right);
+        }
+    }
 }
 
 
@@ -120,3 +190,20 @@ myBST.root.right.right = node5;
 
 console.log("Our minimum value is: " + myBST.min());
 console.log("Our maximum value is: " + myBST.max());
+
+myBST.insert(9);
+console.log("Our minimum value is: " + myBST.min());
+myBST.insert(60);
+console.log("Our maximum value is: " + myBST.max());
+
+myBST.insert(5);
+console.log("Our minimum value is: " + myBST.min());
+myBST.insert(5);
+console.log("Our minimum value is: " + myBST.min());
+myBST.insertRecursive(70);
+console.log("Our maximum value is: " + myBST.max());
+
+myBST.insert(25);
+console.log(myBST.root.left)
+myBST.insertRecursive(35);
+console.log(myBST.root.right)
