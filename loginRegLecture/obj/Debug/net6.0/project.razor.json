@@ -16336,6 +16336,11 @@
       "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\loginRegLecture\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\loginRegLecture\\Views\\Home\\_Login.cshtml",
+      "TargetPath": "Views\\Home\\_Login.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
