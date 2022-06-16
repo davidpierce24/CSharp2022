@@ -16298,6 +16298,11 @@
   "RootNamespace": "oneToManyLecture",
   "Documents": [
     {
+      "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\oneToManyLecture\\Views\\Home\\Pets.cshtml",
+      "TargetPath": "Views\\Home\\Pets.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\oneToManyLecture\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

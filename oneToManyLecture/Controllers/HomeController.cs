@@ -17,7 +17,43 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.Owners = _context.Owners.ToList();
         return View();
+    }
+
+    [HttpPost("owner/add")]
+    public IActionResult AddOwner(Owner newOwner)
+    {
+        if(ModelState.IsValid){
+            _context.Add(newOwner);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        } else {
+            ViewBag.Owners = _context.Owners.ToList();
+            return View ("Index");
+        }
+    }
+
+    [HttpGet("pets")]
+    public IActionResult Pets()
+    {
+        ViewBag.Owners = _context.Owners.ToList();
+        ViewBag.Pets = _context.Pets.ToList();
+        return View();
+    }
+
+    [HttpPost("pet/add")]
+    public IActionResult AddPet(Pet newPet)
+    {
+        if(ModelState.IsValid){
+            _context.Add(newPet);
+            _context.SaveChanges();
+            return RedirectToAction("Pets");
+        } else {
+            ViewBag.Owners = _context.Owners.ToList();
+            ViewBag.Pets = _context.Pets.ToList();
+            return View ("Pets");
+        }
     }
 
     public IActionResult Privacy()

@@ -2,7 +2,25 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model Owner
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h2>Add an Owner</h2>
+    <form action="/owner/add" method="post">
+        <div class="form-group">
+            <label for="Name">Owner Name</label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add Owner" class="btn btn-info">
+        </div>
+    </form>
+    <h2>All Owners</h2>
+    <ul>
+        @foreach (Owner o in ViewBag.Owners)
+        {
+            <li>@o.Name</li>
+        }
+    </ul>
 </div>

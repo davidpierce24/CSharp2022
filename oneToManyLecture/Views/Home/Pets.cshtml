@@ -1,0 +1,37 @@
+@model Pet
+
+<div class="text-center">
+<h2>Add a pet</h2>
+    <form action="/pet/add" method="post">
+        <div class="form-group">
+            <label for="Name">Pet Name</label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Species">Pet Species</label>
+            <input asp-for="Species" class="form-control">
+            <span asp-validation-for="Species" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="OwnerId">Owner</label>
+            <select asp-for="OwnerId" class="form-control">
+                @foreach (Owner o in ViewBag.Owners)
+                {
+                    <option value="@o.OwnerId">@o.Name</option>
+                }
+            </select>
+            <span asp-validation-for="OwnerId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add Pet" class="btn btn-info">
+        </div>
+    </form>
+    <h2>All Pets</h2>
+    <ul>
+        @foreach (Pet p in ViewBag.Pets)
+        {
+            <li>@p.Name is ruled by @p.Owner.Name</li>
+        }
+    </ul>
+</div>
