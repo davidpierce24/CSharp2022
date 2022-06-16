@@ -164,6 +164,39 @@ class BST {
             return this.insertRecursive(val, runner.right);
         }
     }
+
+    size(runner=this.root){
+        if(runner === null){
+            return 0;
+        }
+        else{
+            return 1 + this.size(runner.left) + this.size(runner.right);
+        }
+    }
+
+    height(runner = this.root){
+        if(runner === null){
+            return 0;
+        }
+        else{
+            return 1 + Math.max(this.height(runner.left), this.height(runner.right));
+        }
+    }
+
+    isFull(runner = this.root){
+        if(runner === null){
+            return true;
+        }
+        else if(runner.right === null && runner.left !== null){
+            return false;
+        }
+        else if(runner.right !== null && runner.left === null){
+            return false;
+        }
+        else{
+            return this.isFull(runner.left) && this.isFull(runner.right);
+        }
+    }
 }
 
 
