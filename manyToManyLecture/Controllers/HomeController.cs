@@ -60,6 +60,9 @@ public class HomeController : Controller
         }
     }
 
+    // route to render add to cast page
+    [HttpGet("")]
+
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
