@@ -62,7 +62,12 @@ public class HomeController : Controller
     }
 
     // route to render a specific product page
-    
+    [HttpGet("product/show/{ProductId}")]
+    public IActionResult ShowProduct(int ProductId)
+    {
+        ViewBag.Product = _context.Products.FirstOrDefault(x => x.ProductId == ProductId);
+        return View();
+    }
 
     // route to process adding a category to a product
 
