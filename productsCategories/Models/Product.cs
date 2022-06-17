@@ -16,5 +16,5 @@ public class Product
     public double Price {get; set;}
     public DateTime CreatedAt {get; set;} = DateTime.Now;
     public DateTime UpdatedAt {get; set;} = DateTime.Now;
-    public List<Category> ProductCategories = new List<Category>();
+    public List<Group> ProductCategories {get; set;} = new List<Group>();
 }

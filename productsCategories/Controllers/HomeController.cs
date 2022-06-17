@@ -65,7 +65,8 @@ public class HomeController : Controller
     [HttpGet("product/show/{ProductId}")]
     public IActionResult ShowProduct(int ProductId)
     {
-        ViewBag.Product = _context.Products.FirstOrDefault(x => x.ProductId == ProductId);
+        ViewBag.Product = _context.Products.Include(t => t.ProductCategories).ThenInclude(x => x.Category).FirstOrDefault(d => d.ProductId == ProductId);
+        Console.WriteLine("success");
         return View();
     }
 
