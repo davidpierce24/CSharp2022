@@ -15,6 +15,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Code\Coding Dojo\C#2022\chefsNDishes
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Code/Coding Dojo/C\#2022/chefsNDishes/Views/Home/AddChef.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRDaGVmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/Coding Dojo/C\#2022/chefsNDishes/Views/Home/AddDish.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGREaXNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/Coding Dojo/C\#2022/chefsNDishes/Views/Home/Dishes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Code/Coding Dojo/C\#2022/chefsNDishes/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

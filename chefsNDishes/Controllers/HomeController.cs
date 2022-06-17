@@ -19,6 +19,14 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.Chefs = _context.Chefs.ToList();
+        return View();
+    }
+
+    [HttpGet("dishes/show")]
+    public IActionResult Dishes()
+    {
+        ViewBag.Dishes = _context.Dishes.ToList();
         return View();
     }
 
