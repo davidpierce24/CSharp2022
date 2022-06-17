@@ -197,46 +197,58 @@ class BST {
             return this.isFull(runner.left) && this.isFull(runner.right);
         }
     }
+
+    dfsPreorder(node = this.root, vals = []){
+        if(node) {
+            vals.push(node.data)
+            this.dfsPreorder(node.left, vals)
+            this.dfsPreorder(node.right, vals)
+        }
+        return vals;
+    }
 }
 
 
 
 
 var myBST = new BST();
-console.log("Is my tree empty?");
-console.log(myBST.isEmpty());
-var node1 = new Node(30);
-myBST.root = node1;
-console.log("Is my tree empty?");
-console.log(myBST.isEmpty());
-// console.log(myBST);
-var node2 = new Node(20);
-var node3 = new Node(40);
-var node4 = new Node(10);
-var node5 = new Node(50);
+// console.log("Is my tree empty?");
+// console.log(myBST.isEmpty());
+// var node1 = new Node(30);
+// myBST.root = node1;
+// console.log("Is my tree empty?");
+// console.log(myBST.isEmpty());
+// // console.log(myBST);
+// var node2 = new Node(20);
+// var node3 = new Node(40);
+// var node4 = new Node(10);
+// var node5 = new Node(50);
 
-myBST.root.right = node3;
-myBST.root.left = node2;
-myBST.root.left.left = node4;
-myBST.root.right.right = node5;
-// console.log(myBST);
+// myBST.root.right = node3;
+// myBST.root.left = node2;
+// myBST.root.left.left = node4;
+// myBST.root.right.right = node5;
+// // console.log(myBST);
 
-console.log("Our minimum value is: " + myBST.min());
-console.log("Our maximum value is: " + myBST.max());
+// console.log("Our minimum value is: " + myBST.min());
+// console.log("Our maximum value is: " + myBST.max());
 
-myBST.insert(9);
-console.log("Our minimum value is: " + myBST.min());
-myBST.insert(60);
-console.log("Our maximum value is: " + myBST.max());
+// myBST.insert(9);
+// console.log("Our minimum value is: " + myBST.min());
+// myBST.insert(60);
+// console.log("Our maximum value is: " + myBST.max());
 
-myBST.insert(5);
-console.log("Our minimum value is: " + myBST.min());
-myBST.insert(5);
-console.log("Our minimum value is: " + myBST.min());
-myBST.insertRecursive(70);
-console.log("Our maximum value is: " + myBST.max());
+// myBST.insert(5);
+// console.log("Our minimum value is: " + myBST.min());
+// myBST.insert(5);
+// console.log("Our minimum value is: " + myBST.min());
+// myBST.insertRecursive(70);
+// console.log("Our maximum value is: " + myBST.max());
 
-myBST.insert(25);
-console.log(myBST.root.left)
-myBST.insertRecursive(35);
-console.log(myBST.root.right)
+// myBST.insert(25);
+// console.log(myBST.root.left)
+// myBST.insertRecursive(35);
+// console.log(myBST.root.right)
+
+myBST.insert(25).insert(15).insert(10).insert(4).insert(12).insert(22).insert(18).insert(24).insert(50).insert(35).insert(31).insert(44).insert(70).insert(66).insert(90);
+console.log(myBST.dfsPreorder());
