@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using chefsNDishes.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
 
@@ -20,7 +21,7 @@ public class HomeController : Controller
     // route to render home page with all chefs
     public IActionResult Index()
     {
-        ViewBag.Chefs = _context.Chefs.ToList();
+        ViewBag.Chefs = _context.Chefs.Include(c => c.ChefDishes).ToList();
         return View();
     }
 
@@ -28,7 +29,7 @@ public class HomeController : Controller
     [HttpGet("dishes/show")]
     public IActionResult Dishes()
     {
-        ViewBag.Dishes = _context.Dishes.ToList();
+        ViewBag.Dishes = _context.Dishes.Include(d => d.Chef).ToList();
         return View();
     }
 
@@ -46,14 +47,34 @@ public class HomeController : Controller
         if(ModelState.IsValid){
             _context.Add(newChef);
             _context.SaveChanges();
-            ViewBag.Chefs = _context.Chefs.ToList();
+            ViewBag.Chefs = _context.Chefs.Include(c => c.ChefDishes).ToList();
             return RedirectToAction("Index");
         } else {
             return View("AddChef");
         }
     }
 
-    // route to display added
+    // route to display add a dish form
+    [HttpGet("dish/add")]
+    public IActionResult AddDish()
+    {
+        ViewBag.Chefs = _context.Chefs.Include(c => c.ChefDishes).ToList();
+        return View();
+    }
+
+    // route to process added dish
+    [HttpPost("dish/add/process")]
+    public IActionResult ProcessDish(Dish newDish)
+    {
+        if(ModelState.IsValid){
+            _context.Add(newDish);
+            _context.SaveChanges();
+            return RedirectToAction("Dishes");
+        } else {
+            ViewBag.Chefs = _context.Chefs.Include(c => c.ChefDishes).ToList();
+            return View("AddDish");
+        }
+    }
 
     public IActionResult Privacy()
     {
