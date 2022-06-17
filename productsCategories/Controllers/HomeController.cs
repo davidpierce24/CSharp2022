@@ -62,6 +62,7 @@ public class HomeController : Controller
     }
 
     // route to render a specific product page
+    
 
     // route to process adding a category to a product
 

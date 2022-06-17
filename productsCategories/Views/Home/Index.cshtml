@@ -33,7 +33,7 @@
             <h2>Existing Products</h2>
             @foreach (Product p in ViewBag.Products)
             {
-                <p>@p.Name</p>
+                <p><a href="/product/show/@p.ProductId">@p.Name</a></p>
             }
         </div>
     </div>

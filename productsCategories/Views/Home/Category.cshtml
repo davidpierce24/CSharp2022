@@ -23,7 +23,7 @@
             <h2>Existing Categories</h2>
             @foreach (Category c in ViewBag.Categories)
             {
-                <p>@c.Name</p>
+                <p><a href="/category/show/@c.CategoryId">@c.Name</a></p>
             }
         </div>
     </div>
