@@ -15,8 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Code\Coding Dojo\C#2022\manyToManyLecture
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Code/Coding Dojo/C\#2022/manyToManyLecture/Views/Home/AddToCast.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRUb0Nhc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Code/Coding Dojo/C\#2022/manyToManyLecture/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/Coding Dojo/C\#2022/manyToManyLecture/Views/Home/Movies.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNb3ZpZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Code/Coding Dojo/C\#2022/manyToManyLecture/Views/Home/Privacy.cshtml]

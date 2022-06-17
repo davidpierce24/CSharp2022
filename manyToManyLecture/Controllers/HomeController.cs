@@ -20,13 +20,47 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.Actors = _context.Actors.ToList();
         return View();
     }
 
-    public IActionResult Privacy()
+    // route to process actor addition
+    [HttpPost("actor/add")]
+    public IActionResult AddActor(Actor newActor)
     {
+        if(ModelState.IsValid){
+            _context.Add(newActor);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        } else {
+            ViewBag.Actors = _context.Actors.ToList();
+            return View("Index");
+        }
+    }
+
+    // route to render movies page
+    [HttpGet("movies")]
+    public IActionResult Movies()
+    {
+        ViewBag.Movies = _context.Movies.ToList();
         return View();
     }
+
+    // route to process movie addition
+    [HttpPost("movie/add")]
+    public IActionResult AddMovie(Movie newMovie)
+    {
+        if(ModelState.IsValid){
+            _context.Add(newMovie);
+            _context.SaveChanges();
+            return RedirectToAction("Movies");
+        } else {
+            ViewBag.Movies = _context.Movies.ToList();
+            return View("Movies");
+        }
+    }
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Cast Page";
+}
+
+@model CastList
+
+<div class="text-center">
+    <h1>Movies</h1>
+    <div class="row">
+        <div class="col">
+            <form action="/movie/add" method="post">
+                <div class="form-group">
+                    <label for="Title">Add Movie</label>
+                    <input asp-for="Title" class="form-control">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add Movie" class="btn btn-info">
+                </div>
+            </form>
+        </div>
+        <div class="col">
+            @foreach (Movie m in ViewBag.Movies)
+            {
+                <p>@m.Title</p>
+            }
+        </div>
+    </div>
+</div>

@@ -16308,6 +16308,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\manyToManyLecture\\Views\\Home\\Movies.cshtml",
+      "TargetPath": "Views\\Home\\Movies.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\manyToManyLecture\\Views\\Home\\AddToCast.cshtml",
+      "TargetPath": "Views\\Home\\AddToCast.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\manyToManyLecture\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"

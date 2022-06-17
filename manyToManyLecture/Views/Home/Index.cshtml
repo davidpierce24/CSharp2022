@@ -1,8 +1,29 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Actor Page";
 }
 
+@model Actor
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>Actors</h1>
+    <div class="row">
+        <div class="col">
+            <form action="/actor/add" method="post">
+                <div class="form-group">
+                    <label for="Name">Add Actor</label>
+                    <input asp-for="Name" class="form-control">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add Actor" class="btn btn-info">
+                </div>
+            </form>
+        </div>
+        <div class="col">
+            @foreach (Actor a in ViewBag.Actors)
+            {
+                <p>@a.Name</p>
+            }
+        </div>
+    </div>
 </div>
