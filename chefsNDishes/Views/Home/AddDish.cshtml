@@ -1,0 +1,29 @@
+@model Dish
+
+<div class="text-center">
+    <h2>Add a Chef</h2>
+    <form action="/dish/add/process" method="post" class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="FirstName">First Name</label>
+                <input asp-for="FirstName" class="form-control">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="LastName">Last Name</label>
+                <input asp-for="LastName" class="form-control">
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="DOB">Date of Birth</label>
+                <input asp-for="DOB" class="form-control">
+                <span asp-validation-for="DOB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Chef" class="btn btn-info">
+            </div>
+        </div>
+    </form>
+</div>
