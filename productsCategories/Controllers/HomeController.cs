@@ -66,13 +66,24 @@ public class HomeController : Controller
     public IActionResult ShowProduct(int ProductId)
     {
         ViewBag.Product = _context.Products.Include(t => t.ProductCategories).ThenInclude(x => x.Category).FirstOrDefault(d => d.ProductId == ProductId);
-        Console.WriteLine("success");
         return View();
     }
 
-    // route to process adding a category to a product
+    // // route to process adding a category to a product
+    // [HttpPost("product/category/process")]
+    // public IActionResult ProcessCategory(Group newGroup)
+    // {
+
+    // }
+
 
     // route to render a specific category page
+    [HttpGet("category/show/{CategoryId}")]
+    public IActionResult ShowCategory(int CategoryId)
+    {
+        ViewBag.Category = _context.Categories.Include(t => t.ProductsInCategory).ThenInclude(x => x.Product).FirstOrDefault(d => d.CategoryId == CategoryId);
+        return View();
+    }
 
     // route to process adding a product to a category
 

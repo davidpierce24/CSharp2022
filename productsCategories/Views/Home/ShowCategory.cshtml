@@ -1,3 +1,17 @@
 @{
     ViewData["Title"] = "Category Page";
 }
+
+<div class="text-center">
+    <h1>@ViewBag.Category.Name</h1>
+    <div class="row">
+        <div class="col">
+            <h3>Categories</h3>
+            @foreach (Product p in ViewBag.Category.ProductsInCategory)
+            {
+                <p>@p.Name</p>
+            }
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
