@@ -2,19 +2,28 @@
     ViewData["Title"] = "Product Page";
 }
 
+@model Group
+
 <div class="text-center">
     <h1>@ViewBag.Product.Name</h1>
     <div class="row">
         <div class="col">
             <h3>Categories</h3>
-            @foreach (Category c in ViewBag.Product.ProductCategories)
+            @foreach (Group g in ViewBag.Product.ProductCategories)
             {
-                <p>@c.Name</p>
+                <p>@g.Category.Name</p>
             }
         </div>
         <div class="col">
             <form action="/product/category/process" method="post">
-                @* <select asp-for=""></select> *@
+                <input type="hidden" asp-for="ProductId" value="@ViewBag.Product.ProductId" >
+                <select asp-for="CategoryId" class="form-control">
+                    @foreach (Category c in ViewBag.ExtraCategories)
+                    {
+                        <option value="@c.CategoryId">@c.Name</option>
+                    }
+                </select>
+                <input type="submit" value="Add Category" class="btn btn-info">
             </form>
         </div>
     </div>
