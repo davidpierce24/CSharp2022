@@ -85,10 +85,18 @@ public class HomeController : Controller
     public IActionResult ShowCategory(int CategoryId)
     {
         ViewBag.Category = _context.Categories.Include(t => t.ProductsInCategory).ThenInclude(x => x.Product).FirstOrDefault(d => d.CategoryId == CategoryId);
+        ViewBag.ExtraProducts = _context.Products.Include(d => d.ProductCategories).Where(d => d.ProductCategories.All(x => x.CategoryId != CategoryId)).ToList();
         return View();
     }
 
     // route to process adding a product to a category
+    [HttpPost("category/product/process")]
+    public IActionResult ProcessProduct(Group newGroup)
+    {
+        _context.Add(newGroup);
+        _context.SaveChanges();
+        return RedirectToAction("ShowCategory", new{CategoryId = newGroup.CategoryId});
+    }
 
 
 
