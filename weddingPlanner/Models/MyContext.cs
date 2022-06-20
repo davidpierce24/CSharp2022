@@ -5,7 +5,7 @@
     public class MyContext : DbContext 
     { 
         public MyContext(DbContextOptions options) : base(options) { }
-        // public DbSet<ClassName> ClassesNames {get; set;} 
+        public DbSet<User> Users {get; set;}
     }
 
     // add more of this line (public DbSet<ClassName> ClassesNames {get; set;} ) whenever theres a new table needed in db
