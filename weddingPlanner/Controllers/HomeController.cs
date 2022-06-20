@@ -84,6 +84,10 @@ public class HomeController : Controller
             return RedirectToAction("Index");
         }
         User loggedInUser = _context.Users.FirstOrDefault(x => x.UserId == HttpContext.Session.GetInt32("user"));
+
+        // display all weddings on dashboard
+        ViewBag.Weddings = _context.Weddings.Include(d => d.Attendees).ToList();
+
         return View();
     }
 

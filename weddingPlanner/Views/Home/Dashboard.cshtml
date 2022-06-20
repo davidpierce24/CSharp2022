@@ -3,5 +3,29 @@
 }
 
 <div class="text-center">
-    <h1>Yay</h1>
+    <div class="row">
+        <div class="col-10">
+            <h1>Welcome to the WeddingPlanner</h1>
+        </div>
+        <div class="col-2 align-self-center">
+            <a href="" class="btn btn-danger">Log Out</a>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <tr>
+            <th>Wedding</th>
+            <th>Date</th>
+            <th>Guests</th>
+            <th>Action</th>
+        </tr>
+        @foreach (Wedding w in ViewBag.Weddings)
+        {
+            <tr>
+                <td>@w.Spouse1 and @w.Spouse2</td>
+                <td>@w.Date.ToString("MMMM dd yyyy")</td>
+                <td>@w.Attendees.Count</td>
+            </tr>
+        }
+    </table>
+    <a href="" class="btn btn-info">New Wedding</a>
 </div>
