@@ -121,6 +121,16 @@ public class HomeController : Controller
         return RedirectToAction("Dashboard");
     }
 
+    // route to unrsvp
+    [HttpGet("unrsvp/{WeddingId}/{UserId}")]
+    public IActionResult UnRSVP(int WeddingId, int UserId)
+    {
+        Connection UnRSVP = _context.Connections.FirstOrDefault(x => x.WeddingId == WeddingId && x.UserId == UserId);
+        _context.Connections.Remove(UnRSVP);
+        _context.SaveChanges();
+        return RedirectToAction("Dashboard");
+    }
+
 
 
 

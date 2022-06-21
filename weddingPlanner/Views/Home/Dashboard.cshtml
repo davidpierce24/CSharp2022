@@ -30,7 +30,7 @@
                     <td>Delete</td>
                 } else {
                     if(w.Attendees.Any(d => d.UserId == ViewBag.User.UserId)){
-                        <td>UnRSVP</td>
+                        <td><a href="/unrsvp/@w.WeddingId/@ViewBag.User.UserId" class="btn btn-warning btn-sm">UnRSVP</a></td>
                     } else {
                         <td>
                             <form action="/rsvp/process" method="post">
