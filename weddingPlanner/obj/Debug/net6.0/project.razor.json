@@ -16308,6 +16308,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\weddingPlanner\\Views\\Home\\ShowWedding.cshtml",
+      "TargetPath": "Views\\Home\\ShowWedding.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Code\\Coding Dojo\\C#2022\\weddingPlanner\\Views\\Home\\Dashboard.cshtml",
       "TargetPath": "Views\\Home\\Dashboard.cshtml",
       "FileKind": "mvc"

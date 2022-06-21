@@ -23,7 +23,7 @@
         @foreach (Wedding w in ViewBag.Weddings)
         {
             <tr>
-                <td><a href="">@w.Spouse1 and @w.Spouse2</a></td>
+                <td><a href="/wedding/show/@w.WeddingId">@w.Spouse1 and @w.Spouse2</a></td>
                 <td>@w.Date.ToString("MMMM dd, yyyy")</td>
                 <td>@w.Attendees.Count</td>
                 @if(ViewBag.User.FirstName.ToLower() == w.Spouse1.ToLower() || ViewBag.User.FirstName.ToLower() == w.Spouse2.ToLower()){

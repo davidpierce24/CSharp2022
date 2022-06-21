@@ -141,6 +141,14 @@ public class HomeController : Controller
         return RedirectToAction("Dashboard");
     }
 
+    //route to render a wedding page
+    [HttpGet("wedding/show/{WeddingId")]
+    public IActionResult ShowWedding(int WeddingId)
+    {
+        ViewBag.Wedding = _context.Weddings.Include(x => x.Attendees).ThenInclude(x => x.User).Where(x => x.WeddingId == WeddingId);
+        return View();
+    }
+
 
 
 
