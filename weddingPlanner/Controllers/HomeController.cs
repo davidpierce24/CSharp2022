@@ -87,6 +87,7 @@ public class HomeController : Controller
 
         // display all weddings on dashboard
         ViewBag.Weddings = _context.Weddings.Include(d => d.Attendees).ToList();
+        ViewBag.User = loggedInUser;
 
         return View();
     }
