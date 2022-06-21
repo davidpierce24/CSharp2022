@@ -9,6 +9,6 @@
 <h3>Guests:
     @foreach (Connection c in ViewBag.Wedding.Attendees)
     {
-        <p>@c.User.FirstName</p>
+        <p>@c.User.FirstName @c.User.LastName</p>
     } 
 </h3>

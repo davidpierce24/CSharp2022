@@ -106,7 +106,7 @@ public class HomeController : Controller
         if(ModelState.IsValid){
             _context.Add(newWedding);
             _context.SaveChanges();
-            return RedirectToAction("Dashboard");
+            return RedirectToAction("ShowWedding", new {WeddingId = newWedding.WeddingId});
         } else {
             return View("AddWedding");
         }
