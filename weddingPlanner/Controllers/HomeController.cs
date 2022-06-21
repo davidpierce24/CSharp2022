@@ -145,7 +145,7 @@ public class HomeController : Controller
     [HttpGet("wedding/show/{WeddingId}")]
     public IActionResult ShowWedding(int WeddingId)
     {
-        ViewBag.Wedding = _context.Weddings.Include(x => x.Attendees).ThenInclude(x => x.User).Where(x => x.WeddingId == WeddingId);
+        ViewBag.Wedding = _context.Weddings.Include(x => x.Attendees).ThenInclude(x => x.User).FirstOrDefault(x => x.WeddingId == WeddingId);
         return View();
     }
 
