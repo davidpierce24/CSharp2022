@@ -112,6 +112,8 @@ public class HomeController : Controller
         }
     }
 
+    // route to rsvp to a wedding
+    
 
 
 
