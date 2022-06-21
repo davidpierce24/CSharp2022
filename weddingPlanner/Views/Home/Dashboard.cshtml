@@ -29,13 +29,17 @@
                 @if(ViewBag.User.FirstName.ToLower() == w.Spouse1.ToLower() || ViewBag.User.FirstName.ToLower() == w.Spouse2.ToLower()){
                     <td>Delete</td>
                 } else {
-                    <td>
-                        <form action="/rsvp/process" method="post">
-                            <input asp-for="WeddingId" type="hidden" value="@w.WeddingId">
-                            <input asp-for="UserId" type="hidden" value="@ViewBag.User.UserId">
-                            <input type="submit" value="RSVP">
-                        </form>
-                    </td>
+                    if(w.Attendees.Any(d => d.UserId == ViewBag.User.UserId)){
+                        <td>UnRSVP</td>
+                    } else {
+                        <td>
+                            <form action="/rsvp/process" method="post">
+                                <input asp-for="WeddingId" type="hidden" value="@w.WeddingId">
+                                <input asp-for="UserId" type="hidden" value="@ViewBag.User.UserId">
+                                <input type="submit" value="RSVP" class="btn btn-info btn-sm">
+                            </form>
+                        </td>
+                    }
                 }
             </tr>
         }

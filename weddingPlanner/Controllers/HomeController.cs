@@ -113,7 +113,13 @@ public class HomeController : Controller
     }
 
     // route to rsvp to a wedding
-    
+    [HttpPost("/rsvp/process")]
+    public IActionResult ProcessRSVP(Connection rsvp)
+    {
+        _context.Add(rsvp);
+        _context.SaveChanges();
+        return RedirectToAction("Dashboard");
+    }
 
 
 
