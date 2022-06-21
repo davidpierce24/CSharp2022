@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Wedding Page";
+}
+
+<h1>@ViewBag.Wedding.Spouse1 and @ViewBag.Wedding.Spouse2's Wedding</h1>
+
+<h3>Date: @ViewBag.Wedding.Date</h3>
+
+<h3>Guests:
+    @foreach (Connection c in ViewBag.Wedding.Attendees)
+    {
+        <p>@c.User.FirstName;</p>
+    } 
+</h3>
