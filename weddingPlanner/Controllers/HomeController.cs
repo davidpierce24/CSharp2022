@@ -91,6 +91,26 @@ public class HomeController : Controller
         return View();
     }
 
+    // route to display add a wedding form
+    [HttpGet("wedding/add")]
+    public IActionResult AddWedding()
+    {
+        return View();
+    }
+
+    // route to process wedding addition
+    [HttpPost("wedding/process")]
+    public IActionResult ProcessWedding(Wedding newWedding)
+    {
+        if(ModelState.IsValid){
+            _context.Add(newWedding);
+            _context.SaveChanges();
+            return RedirectToAction("Dashboard");
+        } else {
+            return View("AddWedding");
+        }
+    }
+
 
 
 
