@@ -27,7 +27,7 @@
                 <td>@w.Date.ToString("MMMM dd, yyyy")</td>
                 <td>@w.Attendees.Count</td>
                 @if(ViewBag.User.FirstName.ToLower() == w.Spouse1.ToLower() || ViewBag.User.FirstName.ToLower() == w.Spouse2.ToLower()){
-                    <td>Delete</td>
+                    <td><a href="/wedding/delete/@w.WeddingId" class="btn btn-danger btn-sm">Delete</a></td>
                 } else {
                     if(w.Attendees.Any(d => d.UserId == ViewBag.User.UserId)){
                         <td><a href="/unrsvp/@w.WeddingId/@ViewBag.User.UserId" class="btn btn-warning btn-sm">UnRSVP</a></td>

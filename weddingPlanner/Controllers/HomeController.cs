@@ -131,6 +131,16 @@ public class HomeController : Controller
         return RedirectToAction("Dashboard");
     }
 
+    // route to delete a wedding
+    [HttpGet("wedding/delete/{WeddingId}")]
+    public IActionResult DeleteWedding(int WeddingId)
+    {
+        Wedding deleteWedding = _context.Weddings.SingleOrDefault(x => x.WeddingId == WeddingId);
+        _context.Weddings.Remove(deleteWedding);
+        _context.SaveChanges();
+        return RedirectToAction("Dashboard");
+    }
+
 
 
 
