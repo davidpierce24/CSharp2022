@@ -11,11 +11,13 @@ public class HomeController : Controller
 {
     private MyContext _context;
     private readonly ILogger<HomeController> _logger;
+    private readonly IConfiguration _config;
 
-    public HomeController(ILogger<HomeController> logger, MyContext context)
+    public HomeController(ILogger<HomeController> logger, MyContext context, IConfiguration config)
     {
         _logger = logger;
         _context = context;
+        _config = config;
     }
 
     // Route to render home login page
@@ -145,6 +147,7 @@ public class HomeController : Controller
     [HttpGet("wedding/show/{WeddingId}")]
     public IActionResult ShowWedding(int WeddingId)
     {
+        ViewBag.GoogleMaps = _config["GoogleMaps:ApiKey"];
         ViewBag.Wedding = _context.Weddings.Include(x => x.Attendees).ThenInclude(x => x.User).FirstOrDefault(x => x.WeddingId == WeddingId);
         return View();
     }
