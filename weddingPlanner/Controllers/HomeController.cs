@@ -23,6 +23,13 @@ public class HomeController : Controller
     // Route to render home login page
     public IActionResult Index()
     {
+        List<Wedding> expired = _context.Weddings.ToList();
+        foreach(Wedding w in expired){
+            if(w.Date < DateTime.Now){
+                _context.Weddings.Remove(w);
+            }
+        }
+        _context.SaveChanges();
         HttpContext.Session.Clear();
         return View();
     }
