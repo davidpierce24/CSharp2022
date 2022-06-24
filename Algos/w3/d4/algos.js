@@ -85,22 +85,75 @@ class DLL {
         console.log(arr);
     }
 
-    // Insert After
-    // Insert a given value after another given value
-    InsertAfter(val, valB) {
-        // your code here
+    // Insert After (val, existingVal) => insert the value after the given value
+    // What do you do if you don't find the existingVal?
+    insertAfter(valA, valB) {
+        const node = new Node(valA);
+        var runner = this.head;
+        while (runner) {
+            if (runner.data == valB) {
+                if (runner == this.tail){
+                    this.insertAtBack(valA);
+                    return this;
+                }
+                node.next = runner.next;
+                node.previous = runner;
+                runner.next = node;
+                runner.next.next.previous = node;
+                this.size++;
+                return this;
+            } else {
+                runner = runner.next;
+            }
+        }
+        return this;
+    }
+    // Insert Before (val, existingVal) => inser the value before the provided value
+    insertBefore(valA, valB) {
+        const node = new Node(valA);
+        var runner = this.head;
+        while (runner) {
+            if (runner.data == valB) {
+                if (runner == this.head){
+                    this.insertAtFront(valA);
+                    return this;
+                }
+                node.previous = runner.previous;
+                node.next = runner;
+                runner.previous = node;
+                runner.previous.previous.next = node;
+                this.size++;
+                return this;
+            } else {
+                runner = runner.next;
+            }
+        }
+        return this;
+    }
+    // Reverse the DLL (bonus)
+    reverse() {
+        var runner = this.head;
+        const newDLL = new DLL();
+
+        while (runner) {
+            newDLL.insertAtFront(runner.data);
+            runner = runner.next;
+        }
+        this.head = newDLL.head;
+        this.tail = newDLL.tail;
+        return this;
     }
 
-    // Insert Before
-    // Insert a given value before another given value
-    InsertBefore(val, valB) {
-        // your code here
-    }
+    //reverse alternate way
+    reverse2(){
+        const revDll = new DLL();
+        let runner = this.tail;
+        while(runner){
+            revDll.InsertAtBack(runner.data);
+            runner = runner.previous;
+        }
 
-    // Reverse
-    // Reverse your doubly linked list
-    Reverse() {
-        // your code here
+        return revDll;
     }
 }
 
