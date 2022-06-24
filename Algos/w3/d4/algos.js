@@ -84,6 +84,24 @@ class DLL {
         }
         console.log(arr);
     }
+
+    // Insert After
+    // Insert a given value after another given value
+    InsertAfter(val, valB) {
+        // your code here
+    }
+
+    // Insert Before
+    // Insert a given value before another given value
+    InsertBefore(val, valB) {
+        // your code here
+    }
+
+    // Reverse
+    // Reverse your doubly linked list
+    Reverse() {
+        // your code here
+    }
 }
 
 var dll = new DLL();
