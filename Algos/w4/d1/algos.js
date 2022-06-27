@@ -7,16 +7,16 @@ class Node{
     }
 }
 
-class stack{
+class Stack{
     constructor(){
         this.top = null;
     }
 
     Push(val)
     {
+        var node = new Node(val);
         if(!this.top){
-            var node = new Node(val);
-            this.top = node
+            this.top = node;
             return;
         }
         let temp = this.top;
@@ -32,8 +32,10 @@ class stack{
 
     Pop()
     {
-        //Code me!
-
+        if(!this.top) return;
+        let top = this.top;
+        this.top = this.top.next;
+        return top.data;
     }
 
     IsEmpty()
@@ -46,7 +48,7 @@ class stack{
         let str="";
         for(let node=this.top;node;node=node.next)
         {
-            str+=node.value+"->";
+            str+=node.data+"->";
         }
         console.log(str);
     }
@@ -55,12 +57,12 @@ class stack{
 
 let stack=new Stack();
 // console.log(stack.IsEmpty()); /* Expected: False */
-// stack.Push(10);
-// stack.Push(20);
-// stack.Push(30);
-// stack.Push(40);
-// stack.Log(); /* Expected: 40->30->20->10-> */
-// console.log(stack.Pop()); /* Expected: 40 */
+stack.Push(10);
+stack.Push(20);
+stack.Push(30);
+stack.Push(40);
+stack.Log(); /* Expected: 40->30->20->10-> */
+console.log(stack.Pop()); /* Expected: 40 */
 // console.log(stack.Peek()); /* Expected: 30 */
 // stack.Pop(); /* 30 */
 // stack.Pop(); /* 20 */
