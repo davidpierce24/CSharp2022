@@ -110,12 +110,95 @@ class Queue {
 
     // Return true or false whether the sum of the front half of your queue is equal to the sum of the left half of your queue - as before, try to limit yourself to only built in methods within your queue class
     SumOfHalves() {
-        // your code here
+        if(this.isEmpty()) {
+            return false;
+        }
+        
+        let count = Math.floor(this.length/2);
+        let sum1 = 0;
+        let sum2 = 0;
+
+        for(let i = 0; i < count; i++) {
+            this.enqueue(this.front());
+            sum1 += this.front();
+            this.dequeue();
+        }
+
+        if(this.length%2 != 0) {
+            this.enqueue(this.front());
+            this.dequeue();
+        }
+
+        for(let j = 0; j < count; j++) {
+            this.enqueue(this.front());
+            sum2 += this.front();
+            this.dequeue();
+        }
+
+        return sum1 == sum2;
     }
 }
 
 // Two Stack Queue
 // This one is a proof on concept: can you get the functionality of a queue using two stacks? Use your knowledge of queues and stacks to create a class called TwoStackQueue and write the enqueue and dequeue methods
+
+class Stack
+{
+    constructor()
+    {
+        this.top=null;
+    }
+
+    Push(value)
+    {
+        //Code me!
+        if(!this.top)
+        {
+            this.top = new Node(value);
+            return this;
+        }
+        let temp = this.top;
+        this.top = new Node(value);
+        this.top.next = temp;
+        return this;
+    }
+
+    Peek()
+    {
+        //Code me!
+        return this.top.data;
+    }
+
+    Pop()
+    {
+        //Code me!
+        if (!this.top){
+            return;
+        }
+        let temp = this.top;
+        this.top = this.top.next;
+        return temp.data;
+    }
+
+    IsEmpty()
+    {
+        //Code me!
+        if (!this.top){
+            return;
+        }
+        return this.top == null; 
+    }
+
+    Log()
+    {
+        let str="";
+        for(let node=this.top;node;node=node.next)
+        {
+            str+=node.data+"->";
+        }
+        console.log(str);
+    }
+};
 
 class TwoStackQueue {
     constructor() {
@@ -124,11 +207,28 @@ class TwoStackQueue {
     }
 
     enqueue(item) {
-        // your code here
+        this.stack1.Push(item);
+        return this;
     }
 
     dequeue() {
-        // your code here
+        if (this.stack1.IsEmpty()){
+            return this;
+        }
+        
+        while (this.stack1.top){
+            this.stack2.Push(this.stack1.Pop());
+        }
+
+        this.stack2.Log();
+
+        let temp = this.stack2.Pop();
+        while (this.stack2.top){
+            this.stack1.Push(this.stack2.Pop());
+        }
+
+        this.stack1.Log();
+        return this;
     }
 }
 
